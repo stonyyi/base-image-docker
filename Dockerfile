@@ -15,7 +15,7 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # install prerequisite packages
-RUN apt-get install -y dpkg-dev autotools-dev autoconf automake build-essential libtool pkg-config yasm debhelper dh-systemd libexpat-dev libgd2-dev libgeoip-dev liblua5.1-dev libmhash-dev libpam0g-dev libpcre3-dev libperl-dev libssl-dev libxslt1-dev po-debconf zlib1g-dev git curl ruby-dev nodejs-dev npm
+RUN apt-get install -y telnet dpkg-dev autotools-dev autoconf automake build-essential libtool pkg-config yasm debhelper dh-systemd libexpat-dev libgd2-dev libgeoip-dev liblua5.1-dev libmhash-dev libpam0g-dev libpcre3-dev libperl-dev libssl-dev libxslt1-dev po-debconf zlib1g-dev git curl ruby-dev nodejs-dev npm
 
 # copy our SSH keys
 COPY .ssh /root/.ssh
