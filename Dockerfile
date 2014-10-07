@@ -19,3 +19,4 @@ RUN apt-get install -y dpkg-dev autotools-dev autoconf automake build-essential 
 
 # copy our SSH keys
 COPY .ssh /root/.ssh
+RUN chmod 600 /root/.ssh/id_rsa
