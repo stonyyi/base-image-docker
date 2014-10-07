@@ -1,6 +1,6 @@
 # base-image-docker
 
-cine.io transcode service in a [Docker](https://docker.com/) container.
+cine.io base image as a [Docker](https://docker.com/) container.
 
 ## Usage
 
