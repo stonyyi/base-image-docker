@@ -22,7 +22,7 @@ RUN apt-get install -y git curl
 RUN apt-get install -y ruby-dev python-dev golang
 # set default gopath: http://golang.org/doc/code.html#GOPATH
 RUN mkdir $HOME/go
-ENV GOPATH $HOME/go
+RUN export GOPATH=$HOME/go
 
 # https://github.com/joyent/node/wiki/installing-node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
