@@ -15,7 +15,14 @@ RUN apt-get update
 RUN apt-get upgrade -y
 
 # install prerequisite packages
-RUN apt-get install -y telnet dpkg-dev autotools-dev autoconf automake build-essential libtool pkg-config yasm debhelper dh-systemd libexpat-dev libgd2-dev libgeoip-dev liblua5.1-dev libmhash-dev libpam0g-dev libpcre3-dev libperl-dev libssl-dev libxslt1-dev po-debconf zlib1g-dev git curl ruby-dev python-dev
+RUN apt-get install -y telnet dpkg-dev autotools-dev autoconf automake build-essential libtool pkg-config yasm debhelper dh-systemd libexpat-dev libgd2-dev libgeoip-dev liblua5.1-dev libmhash-dev libpam0g-dev libpcre3-dev libperl-dev libssl-dev libxslt1-dev po-debconf zlib1g-dev
+# install useful tools
+RUN apt-get install git curl
+# install useful languages
+RUN apt-get install -y ruby-dev python-dev golang
+# set default gopath: http://golang.org/doc/code.html#GOPATH
+RUN mkdir $HOME/go
+ENV GOPATH $HOME/go
 
 # https://github.com/joyent/node/wiki/installing-node.js-via-package-manager#debian-and-ubuntu-based-linux-distributions
 RUN curl -sL https://deb.nodesource.com/setup | sudo bash -
